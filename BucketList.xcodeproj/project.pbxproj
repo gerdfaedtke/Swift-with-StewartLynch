@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		481FCE7129AD0DE40085E97D /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FCE7029AD0DE40085E97D /* BucketListApp.swift */; };
-		481FCE7329AD0DE40085E97D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FCE7229AD0DE40085E97D /* ContentView.swift */; };
+		481FCE7329AD0DE40085E97D /* BucketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FCE7229AD0DE40085E97D /* BucketListView.swift */; };
 		481FCE7529AD0DE50085E97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481FCE7429AD0DE50085E97D /* Assets.xcassets */; };
 		481FCE7829AD0DE50085E97D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481FCE7729AD0DE50085E97D /* Preview Assets.xcassets */; };
+		481FCE8029ADCB310085E97D /* BucketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FCE7F29ADCB310085E97D /* BucketItem.swift */; };
+		481FCE8229ADD1730085E97D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FCE8129ADD1730085E97D /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		481FCE6D29AD0DE40085E97D /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481FCE7029AD0DE40085E97D /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
-		481FCE7229AD0DE40085E97D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		481FCE7229AD0DE40085E97D /* BucketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListView.swift; sourceTree = "<group>"; };
 		481FCE7429AD0DE50085E97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		481FCE7729AD0DE50085E97D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		481FCE7E29AD0EC30085E97D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		481FCE7F29ADCB310085E97D /* BucketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItem.swift; sourceTree = "<group>"; };
+		481FCE8129ADD1730085E97D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		481FCE6F29AD0DE40085E97D /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
+				481FCE7E29AD0EC30085E97D /* Info.plist */,
 				481FCE7029AD0DE40085E97D /* BucketListApp.swift */,
-				481FCE7229AD0DE40085E97D /* ContentView.swift */,
+				481FCE7229AD0DE40085E97D /* BucketListView.swift */,
+				481FCE8129ADD1730085E97D /* DetailView.swift */,
+				481FCE7F29ADCB310085E97D /* BucketItem.swift */,
 				481FCE7429AD0DE50085E97D /* Assets.xcassets */,
 				481FCE7629AD0DE50085E97D /* Preview Content */,
 			);
@@ -137,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481FCE7329AD0DE40085E97D /* ContentView.swift in Sources */,
+				481FCE8029ADCB310085E97D /* BucketItem.swift in Sources */,
+				481FCE8229ADD1730085E97D /* DetailView.swift in Sources */,
+				481FCE7329AD0DE40085E97D /* BucketListView.swift in Sources */,
 				481FCE7129AD0DE40085E97D /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +280,7 @@
 				DEVELOPMENT_TEAM = LXSSTNCP9V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = BucketList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +309,7 @@
 				DEVELOPMENT_TEAM = LXSSTNCP9V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = BucketList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
