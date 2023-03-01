@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BucketItem: Identifiable, Hashable {
+struct BucketItem: Identifiable, Hashable, Codable {
     
     var id = UUID()
     var name: String

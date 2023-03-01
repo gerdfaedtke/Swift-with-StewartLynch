@@ -9,11 +9,12 @@ import SwiftUI
 
 struct DetailView: View {
     
+    @EnvironmentObject var dataStore: DataStore
     let bucketItem: BucketItem
     
     @State private var note = ""
     @State private var completedDate = Date.distantPast
-    @Binding var bucketList: [BucketItem]
+    
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -39,11 +40,9 @@ struct DetailView: View {
             .toolbar {
                 ToolbarItem {
                     Button("Update") {
-                        if let index = bucketList.firstIndex(where: {$0.id == bucketItem.id})  {
+                     
+                        dataStore.update(bucketItem: bucketItem, note: note, completedDate: completedDate)
                         
-                            bucketList[index].note = note
-                            bucketList[index].completedDate = completedDate
-                        }
                         dismiss()
                     }
                     .buttonStyle(.borderedProminent)
@@ -58,7 +57,8 @@ struct DetailView_Previews: PreviewProvider {
     static let bucketList: Binding<[BucketItem]> = .constant(BucketItem.samples)
     static var previews: some View {
         NavigationStack {
-            DetailView(bucketItem: bucketItem, bucketList: bucketList)
+            DetailView(bucketItem: bucketItem)
+                .environmentObject(DataStore())
         }
     }
 }
